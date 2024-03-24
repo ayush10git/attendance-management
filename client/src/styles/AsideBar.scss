@@ -1,0 +1,38 @@
+section {
+  width: 300px;
+  background-color: $bgColor1;
+  height: 100vh;
+  padding-top: 0.8rem;
+  padding-left: 0.9rem;
+  > aside {
+    .title {
+      @include flex(row, flex-start, baseline, 1rem);
+      padding: 2px;
+      font-size: 1.4rem;
+    }
+
+    .menu {
+      line-height: 3rem;
+      font-size: 1.1rem;
+      font-weight: 500;
+      .menu-items {
+        margin-top: 2rem;
+        > ul {
+          width: 91%;
+          > li {
+            @include flex(row, flex-start, baseline, 1.3rem);
+            padding: 2px;
+            > svg {
+              font-size: 1.2rem;
+            }
+          }
+          .attendance-menu {
+            background-color: black;
+            color: white;
+            border-radius: 10px;
+          }
+        }
+      }
+    }
+  }
+}
