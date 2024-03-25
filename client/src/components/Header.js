@@ -25,7 +25,7 @@ const Header = () => {
       localStorage.removeItem("accessToken");
       localStorage.removeItem("refreshToken");
       localStorage.removeItem("selectedDate");
-      localStorage.removeItem("loggedInUser");
+      toast.success("Logged Out Successfully")
       navigate("/");
     } catch (error) {
       toast.error("error loggin out");

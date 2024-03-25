@@ -7,7 +7,6 @@ header{
         letter-spacing: 1px;
     }
     .features{
-        width: 10%;
         @include flex(row,space-between, center, 1.8rem);
         font-weight: 700;
         font-size: 1.2rem;

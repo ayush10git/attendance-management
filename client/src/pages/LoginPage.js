@@ -20,7 +20,6 @@ const LoginPage = () => {
       const { data } = await login({ email, password });
       const { accessToken, refreshToken } = data.data;
 
-      // console.log(data.data.user);
       dispatch(
         setTokens({
           accessToken: accessToken,
@@ -28,8 +27,7 @@ const LoginPage = () => {
         })
       );
       const user = await getUser(data.data.user._id);
-      localStorage.setItem("loggedInUser", JSON.stringify(user))
-      console.log(user)
+      dispatch(userExist(user));
       toast.success("Login Successful");
       navigate("/attendance");
     } catch (error) {

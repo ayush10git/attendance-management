@@ -23,7 +23,6 @@ const Attendance = () => {
   const [date, setDate] = useState(localStorageRef.current);
 
   const { data, isError, isLoading, error } = useAttendanceRecordsQuery(date);
-  // console.log(data);
 
   if (isError) {
     toast.error(error.message);
@@ -31,6 +30,8 @@ const Attendance = () => {
 
   const records = new Object(data);
   const studentInfo = records.data;
+  console.log(studentInfo);
+
 
   const [markAttendance] = useMarkAttendanceMutation();
 
