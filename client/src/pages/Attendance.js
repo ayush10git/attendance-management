@@ -28,6 +28,8 @@ const Attendance = () => {
     toast.error(error.message);
   }
 
+  console.log(todayDate)
+
   const records = new Object(data);
   const studentInfo = records.data;
   console.log(studentInfo);
